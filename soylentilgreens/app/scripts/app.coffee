@@ -3,8 +3,8 @@
 angular.module('soylentilGreensApp', [])
   .config ($routeProvider) ->
     $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
+      .when '/posts/:id',
+        templateUrl: 'views/posts/show.html'
+        controller: 'PostCtrl'
       .otherwise
-        redirectTo: '/'
+        redirectTo: '/posts/1'

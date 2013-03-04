@@ -59,12 +59,14 @@ nav {
   }
 }
 
-#main {
-  @include span-columns(6, 12);
-  @include push(3);
+#photos {
+  @include span-columns(9, 12);
+  background: rgba(0, 0, 0, .5);
+  min-height: 10 * $base-line-height;
+  color: white;
 }
 
-#peek {
-  @include span-columns(3 omega, 12);  
+#text {
+  @include span-columns(3 omega, 12);
+  background: white;
 }
-
