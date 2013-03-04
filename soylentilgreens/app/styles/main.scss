@@ -30,6 +30,11 @@ body {
   @include serif-family;
 }
 
+img {
+  vertical-align: text-bottom;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic; }
+
 h2 {
   @include sans-family;
   @include adjust-font-size-to(30px, 1);
@@ -118,10 +123,8 @@ strong {
   }
 }
 
-.content, .markdown-help {
-  ul {
-    list-style: disc inside;
-  }
+ul {
+  list-style: disc inside;
 }
 
 .pagination {

@@ -60,13 +60,18 @@ nav {
 }
 
 #photos {
-  @include span-columns(9, 12);
+  @include span-columns(8 omega, 12, $gutter-width);
+  @include padding-leader;
+  @include padding-trailer;
   background: rgba(0, 0, 0, .5);
-  min-height: 10 * $base-line-height;
   color: white;
+  text-align: center;
 }
 
 #text {
-  @include span-columns(3 omega, 12);
+  @include span-columns(4, 12, $gutter-width);
+  @include padding-leader;
+  @include border-radius(2px);
+  // background: rgba(255, 255, 255, .9);
   background: white;
 }
