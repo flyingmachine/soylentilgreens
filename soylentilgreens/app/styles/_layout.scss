@@ -84,26 +84,53 @@ nav {
 
 
 #masthead {
-  @include container;
   position: fixed;
-  width: 100%;
+  @include container;
+  padding: 0 $gutter-width;
   height: 4 * $base-line-height;
   top: 0;
+  left: 0;
+  right: 0;
   background: white;
   //background: #e1ebd3;
   //background: #edf3e4;
   //background: #759543;
   color: black;
+
+  .group { 
+    height: 3 * $base-line-height;
+    border-bottom: 10px solid #edf3e4;
+  }
+  
   #logo {
     @include adjust-font-size-to(60px, 2);
     @include leader(1, 60px);
-    //line-height:0.6em;
+    float: left;
     color: black;
-    border-bottom: 10px solid #edf3e4;
-
-
     span {
       color: #edf3e4;
+    }
+  }
+
+  #nav {
+    float: left;
+    position: relative;
+    top: 2 * $base-line-height;
+    li {
+      list-style: none;
+      float: left;
+      margin-left: $gutter-width;
+      font-style: italic;
+
+      a {
+        color: black;
+        display: block;
+        padding: 4px 8px;
+        &:hover {
+          background: #e3edf2;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
